@@ -8,29 +8,108 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: 40px 300px auto 200px;
+    grid-gap: 10px;
+    overflow: scroll;
+}
+
+body * {
+    background-color: lightgray;
 }
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: auto;
     width: 100vw;
 }
 
 nav {
-    background-color: yellow;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 header {
-    background-color: green;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3; 
 }
 
 main {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+}
+
+#main-articles {
     background-color: red;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+main article {
+    width: 100%;
+    height: 250px;
+}
+
+aside {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+aside article {
+    width: 100%;
+    height: 160px;
+}
+
+#sub-articles {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+#sub-articles article {
+    width: 100%;
+    height: 200px;
+}
+
+#img-gallery {
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+img {
+    object-fit: cover;
+}
+
+article {
+    width: 90%;
+    height: 300px;
+}
+
+div {
+    width: 100%;
+    height: 100px;
 }
 
 footer {
-    background-color: blue;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5; 
 }
